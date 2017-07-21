@@ -4,9 +4,14 @@ import java.text.NumberFormat;
  * Created by igor on 21.07.17.
  */
 public class GetPIExample {
-    public static void main(String[] args) {
+    public String getPI (int numDigets) {
         NumberFormat nf = NumberFormat.getInstance();
-        nf.setMaximumFractionDigits(1);
-        System.out.println("Число PI наближено дорівнює " + nf.format(22.0 / 7.0));
+        nf.setMaximumFractionDigits(numDigets);
+        return  nf.format(22.0 / 7.0);
+    }
+    public static void main(String[] args) {
+        GetPIExample example = new GetPIExample();
+        System.out.println("Число PI наближено дорівнює " + example.getPI(Integer.parseInt(args[0])) );
+
     }
 }
