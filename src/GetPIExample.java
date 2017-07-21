@@ -7,7 +7,7 @@ public class GetPIExample {
     public String getPI (int numDigets) {
         NumberFormat nf = NumberFormat.getInstance();
         nf.setMaximumFractionDigits(numDigets);
-        return  nf.format(22.0 / 7.0);
+        return  nf.format(Math.PI);
     }
     public static void main(String[] args) {
         GetPIExample example = new GetPIExample();
