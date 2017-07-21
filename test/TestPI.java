@@ -17,4 +17,11 @@ public class TestPI {
         String result = example.getPI(6);
         Assert.assertEquals("3,141593", result);
     }
+    @Test
+    public void shouldNotBeEquals2() {
+        GetPIExample example = new GetPIExample();
+        String result = example.getPI(6);
+        Assert.assertNotEquals("3,2141593", result);
+    }
 }
+
